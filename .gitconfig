@@ -3,9 +3,12 @@
   name = JQiue
   email = 861947542@qq.com
 [http]
-#  proxy = 192.168.2.105:7890
+  proxy = 127.0.0.1:7890
 [alias]
 	ds = diff --stat
+  st = status -sb
   logg = log --oneline
   co = checkout
   br = branch
+  d = !git --no-pager diff
+  stat = !git --no-pager diff --stat
