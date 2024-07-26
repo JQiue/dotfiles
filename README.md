@@ -2,6 +2,6 @@
 
 ## note
 
-cargo.config -> $HOME/.cargo/config
+cargo.toml -> $HOME/.cargo/config.toml
 
 config.fish -> /root/.config/fish

@@ -3,12 +3,23 @@
   name = JQiue
   email = 861947542@qq.com
 [http]
-  proxy = 127.0.0.1:7890
+	proxy = http://localhost:7890
+[https]
+  proxy = https://localhost:7890
 [alias]
-	ds = diff --stat
-  st = status -sb
-  logg = log --oneline
   co = checkout
   br = branch
+  mg = merge
+  cm = commit
+  # 查看工作区和暂存区的差异直接输出到终端
   d = !git --no-pager diff
-  stat = !git --no-pager diff --stat
+  # 查看工作区和暂存区之间的差异统计信息直接输出到终端
+  ds = !git --no-pager diff --stat
+  # 查看当前分支状态必要信息并显示当前所在分支
+  st = status -sb
+  # 将每个提交信息压缩成一行显示
+  lgo = log --oneline
+  # 将每个提交信息压缩成一行显示并可视化分支合并历史
+  lgog = log --oneline --graph
+  # 将每个提交信息压缩成一行显示并显示提交的差异统计信息
+  lgos = log --oneline --stat
