@@ -1,3 +1,5 @@
+[init]
+  defaultBranch = main
 [user]
 # Please adapt and uncomment the following lines:
   name = JQiue
