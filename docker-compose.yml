@@ -1,0 +1,40 @@
+services:
+  waline-mini:
+    image: jqiue/waline-mini:latest
+    container_name: waline-mini
+    # nginx runs on the host, so publish to loopback only. Direct
+    # LAN/internet access on 8360 bypasses nginx entirely.
+    ports:
+      - "127.0.0.1:8360:8360"
+    volumes:
+      - waline-db:/app/db
+    environment:
+      - DATABASE_URL=${WALINE_DATABASE_URL:-sqlite:////app/db/waline.sqlite?mode=rwc}
+      - JWT_TOKEN=${WALINE_JWT_TOKEN}
+      - SITE_NAME=${WALINE_SITE_NAME}
+      - SITE_URL=${WALINE_SITE_URL}
+    restart: unless-stopped
+  meilisearch:
+    image: getmeili/meilisearch:v1.22.3
+    container_name: meilisearch
+    restart: unless-stopped
+    mem_limit: 200m
+    memswap_limit: 2g
+    # nginx runs on the host and reverse-proxies this for client-side
+    # search, so publish to loopback only. Direct LAN/internet access on
+    # 7700 bypasses nginx (and its rate limiting) entirely.
+    ports:
+      - "127.0.0.1:7700:7700"
+    volumes:
+      - meilisearch-db:/meili_data
+    environment:
+      # production mode refuses to start if the master key is empty.
+      - MEILI_ENV=production
+      - MEILI_MASTER_KEY=${MEILI_MASTER_KEY:?MEILI_MASTER_KEY is required}
+volumes:
+  waline-db:
+    name: waline-db
+    driver: local
+  meilisearch-db:
+    name: meilisearch-db
+    driver: local

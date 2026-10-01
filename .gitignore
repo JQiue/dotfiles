@@ -1,0 +1,7 @@
+# Local secrets. docker-compose.yml reads these from the project dir.
+.env
+.env.local
+
+# Backups created by linux.sh / windows.ps1
+*.backup
+*.backup.*

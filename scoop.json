@@ -1,0 +1,225 @@
+﻿{
+    "buckets": [
+        {
+            "Name": "main",
+            "Source": "https://gitee.com/scoop-installer-mirrors/Main",
+            "Updated": {
+                "value": "\/Date(1789389691000)\/",
+                "DisplayHint": 2,
+                "DateTime": "2026年9月14日 20:41:31"
+            },
+            "Manifests": 1649
+        },
+        {
+            "Name": "extras",
+            "Source": "https://gitee.com/scoop-installer-mirrors/Extras",
+            "Updated": {
+                "value": "\/Date(1789389766000)\/",
+                "DisplayHint": 2,
+                "DateTime": "2026年9月14日 20:42:46"
+            },
+            "Manifests": 2386
+        },
+        {
+            "Name": "versions",
+            "Source": "https://gitee.com/scoop-installer-mirrors/Versions",
+            "Updated": {
+                "value": "\/Date(1789368587000)\/",
+                "DisplayHint": 2,
+                "DateTime": "2026年9月14日 14:49:47"
+            },
+            "Manifests": 604
+        }
+    ],
+    "apps": [
+        {
+            "Info": "",
+            "Source": "main",
+            "Name": "7zip",
+            "Version": "26.03",
+            "Updated": "\/Date(1789201233217)\/"
+        },
+        {
+            "Info": "",
+            "Source": "versions",
+            "Name": "cuda13.3",
+            "Version": "13.3.0",
+            "Updated": "\/Date(1782480018325)\/"
+        },
+        {
+            "Info": "",
+            "Source": "extras",
+            "Name": "cursor",
+            "Version": "3.13.25",
+            "Updated": "\/Date(1785472508029)\/"
+        },
+        {
+            "Info": "",
+            "Source": "main",
+            "Name": "dark",
+            "Version": "3.14.1",
+            "Updated": "\/Date(1784544427169)\/"
+        },
+        {
+            "Info": "",
+            "Source": "main",
+            "Name": "difftastic",
+            "Version": "0.70.0",
+            "Updated": "\/Date(1789117595134)\/"
+        },
+        {
+            "Info": "",
+            "Source": "extras",
+            "Name": "diskgenius",
+            "Version": "6.2.0.1829",
+            "Updated": "\/Date(1785735502104)\/"
+        },
+        {
+            "Info": "",
+            "Source": "main",
+            "Name": "dnslookup",
+            "Version": "1.12.0",
+            "Updated": "\/Date(1789118218683)\/"
+        },
+        {
+            "Info": "",
+            "Source": "main",
+            "Name": "dust",
+            "Version": "1.2.5",
+            "Updated": "\/Date(1789205331547)\/"
+        },
+        {
+            "Info": "",
+            "Source": "main",
+            "Name": "fnm",
+            "Version": "1.39.0",
+            "Updated": "\/Date(1785404216798)\/"
+        },
+        {
+            "Info": "",
+            "Source": "extras",
+            "Name": "hwinfo",
+            "Version": "8.50-6020",
+            "Updated": "\/Date(1785146717303)\/"
+        },
+        {
+            "Info": "",
+            "Source": "main",
+            "Name": "innounp",
+            "Version": "2.67.3",
+            "Updated": "\/Date(1770451849773)\/"
+        },
+        {
+            "Info": "",
+            "Source": "main",
+            "Name": "jcode",
+            "Version": "0.84.0",
+            "Updated": "\/Date(1789391313905)\/"
+        },
+        {
+            "Info": "",
+            "Source": "versions",
+            "Name": "llama.cpp-cu133",
+            "Version": "b9804",
+            "Updated": "\/Date(1782480301693)\/"
+        },
+        {
+            "Info": "",
+            "Source": "versions",
+            "Name": "llama.cpp-cu133-dll",
+            "Version": "b9804",
+            "Updated": "\/Date(1782480196429)\/"
+        },
+        {
+            "Info": "",
+            "Source": "main",
+            "Name": "mdbook",
+            "Version": "0.5.4",
+            "Updated": "\/Date(1788439686315)\/"
+        },
+        {
+            "Info": "",
+            "Source": "versions",
+            "Name": "nodejs22",
+            "Version": "22.23.2",
+            "Updated": "\/Date(1786190609243)\/"
+        },
+        {
+            "Info": "",
+            "Source": "main",
+            "Name": "oh-my-pi",
+            "Version": "18.1.15",
+            "Updated": "\/Date(1788941349134)\/"
+        },
+        {
+            "Info": "",
+            "Source": "main",
+            "Name": "pnpm",
+            "Version": "12.4.1",
+            "Updated": "\/Date(1789211620966)\/"
+        },
+        {
+            "Info": "",
+            "Source": "extras",
+            "Name": "powertoys",
+            "Version": "0.100.2",
+            "Updated": "\/Date(1784544446545)\/"
+        },
+        {
+            "Info": "",
+            "Source": "main",
+            "Name": "python",
+            "Version": "3.14.7",
+            "Updated": "\/Date(1786198772008)\/"
+        },
+        {
+            "Info": "",
+            "Source": "main",
+            "Name": "ripgrep",
+            "Version": "15.2.0",
+            "Updated": "\/Date(1786198798758)\/"
+        },
+        {
+            "Info": "",
+            "Source": "main",
+            "Name": "sqlite",
+            "Version": "3.53.4",
+            "Updated": "\/Date(1788672574291)\/"
+        },
+        {
+            "Info": "",
+            "Source": "main",
+            "Name": "uv",
+            "Version": "0.12.3",
+            "Updated": "\/Date(1786198965615)\/"
+        },
+        {
+            "Info": "",
+            "Source": "extras",
+            "Name": "vcredist2022",
+            "Version": "14.42.34438.0",
+            "Updated": "\/Date(1744446122380)\/"
+        },
+        {
+            "Info": "",
+            "Source": "extras",
+            "Name": "ventoy",
+            "Version": "1.1.17",
+            "Updated": "\/Date(1787151035888)\/"
+        },
+        {
+            "Info": "",
+            "Source": "main",
+            "Name": "websocat",
+            "Version": "1.14.1",
+            "Updated": "\/Date(1787744135696)\/"
+        },
+        {
+            "Info": "",
+            "Source": "extras",
+            "Name": "zed",
+            "Version": "1.14.2",
+            "Updated": "\/Date(1786199157004)\/"
+        }
+    ]
+}
