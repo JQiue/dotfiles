@@ -42,12 +42,43 @@ set -g fish_pager_color_secondary_completion
 set -g fish_pager_color_secondary_prefix
 set -g fish_pager_color_secondary_description
 
-alias sc 'systemctl status'
-alias sclist 'systemctl list-units --type=service'
-alias scstart 'systemctl start'
-alias scstop 'systemctl stop'
-alias screstart 'systemctl restart'
-alias scenable 'systemctl enable'
-alias scdisable 'systemctl disable'
-alias sclog 'journalctl -u'
-alias sclogclean 'journalctl --vacuum-time=1s -u'
+# systemctl shortcut
+function sc
+    if test (count $argv) -eq 0
+        systemctl
+        return
+    end
+
+    switch $argv[1]
+        case s status
+            systemctl status $argv[2..]
+        case start stop restart reload enable disable
+            sudo systemctl $argv
+        case on
+            sudo systemctl enable --now $argv[2..]
+        case off
+            sudo systemctl disable --now $argv[2..]
+        case log
+            journalctl -u $argv[2] -f
+        case logs
+            journalctl -u $argv[2] -n 100 --no-pager
+        case failed
+            systemctl --failed
+        case list
+            systemctl list-units --type=service --all
+        case enabled
+            systemctl list-unit-files --type=service --state=enabled
+        case reload-daemon
+            sudo systemctl daemon-reload
+        case du
+            journalctl --disk-usage
+        case clean
+            sudo journalctl --rotate
+            sudo journalctl --vacuum-time=7d
+        case clean-all
+            sudo journalctl --rotate
+            sudo journalctl --vacuum-time=1s
+        case '*'
+            systemctl $argv
+    end
+end
